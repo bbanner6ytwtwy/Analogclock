@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    width: 600px;
+    height: 600px;
+    background-color: rgb(211, 201, 201);
+    border-radius: 50%;
+    box-shadow: -25px -25px 25px 0px white inset, 25px 25px 25px white inset;
+}
+.clock::before{
+    position: absolute;
+    content: "";
+    width: 410px;
+    height: 410px;
+    background: linear-gradient(deeppink, deepskyblue, orange, chartreuse, red, indigo, chocolate);
+    display: block;
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+}
+.clock{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: -5px -5px 5px 0px white, 5px 5px 5px white;
+}
+.clock::after{
+    position: relative;
+    content: "";
+    width: 405px;
+    height: 405px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    display: block;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+span.top, span.left, span.right, span.bottom{
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    z-index: 1;
+}
+span.top{
+    top: 30px;
+}
+span.left{
+    left: 30px;
+}
+span.bottom{
+    bottom: 30px;
+}
+span.right{
+    right: 30px;
+}
+.min, .hrs, .sec{
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background-color: white;
+    bottom: 50%;
+    transform-origin: bottom;
+}
+.min{
+    background-color: dodgerblue;
+}
+.hrs{
+    background-color: chartreuse;
+    height: 90px;
+}
+.sec{
+    background-color: red;
+    height: 160px;
+}
