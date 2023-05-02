@@ -98,3 +98,17 @@ span.right{
     background-color: red;
     height: 160px;
 }
+@media(max:width 1000px){
+    .clock::before{
+    width: 210px;
+    height: 210px;
+}
+.clock{
+    width: 250px;
+    height: 250px;
+}
+.clock::after{
+    width: 205px;
+    height: 205px;
+}
+}
