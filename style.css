@@ -98,7 +98,7 @@ span.right{
     background-color: red;
     height: 160px;
 }
-@media(max:width 1000px){
+@media(max-width: 1000px){
     .clock::before{
     width: 210px;
     height: 210px;
