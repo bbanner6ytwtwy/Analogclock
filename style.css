@@ -111,4 +111,17 @@ span.right{
     width: 205px;
     height: 205px;
 }
+    .container{
+    width: 300px;
+    height: 300px;
+}
+    .min{
+        height: 60px
+}
+.hrs{
+    height: 45px;
+}
+.sec{
+    height: 80px;
+}
 }
